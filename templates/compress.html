@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Compactar Arquivo</title>
+  <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="section">
+      <form action="/compress" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" id="file-input" onchange="readFile(this)">
+        <input type="submit" value="Compactar" id="submit-button" class="link-button">
+      </form>
+    </div>
+
+    <div class="section file-content" id="file-content">
+      <!-- O conteúdo do arquivo carregado será exibido aqui -->
+    </div>
+
+    <div class="section">
+      {% if filename %}
+      <p>Arquivo compactado: <a href="{{ url_for('static', filename='uploads/' + filename) }}">Download</a></p>
+      <a href="/compress" >Reiniciar compactação</a>
+      {% endif %}
+      <a href="/">Página inicial</a>
+    </div>
+  </div>
+
+  <script src="../static/js/read-file.js"></script>
+  <script src="../static/js/form.js"></script>
+</body>
+
+</html>

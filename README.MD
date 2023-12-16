@@ -10,7 +10,7 @@ Este projeto é uma aplicação web que utiliza a codificação de Huffman para 
 - Interface amigável que permite visualizar o conteúdo do arquivo antes da compressão e descompressão.
 
 ## Pré-requisitos
-- Python 3.6+
+- Python 3.9+
 - Flask
 
 ## Configuração do Ambiente
